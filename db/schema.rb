@@ -22,10 +22,14 @@ ActiveRecord::Schema.define(version: 2018_08_07_183526) do
 
   create_table "messages", force: :cascade do |t|
     t.string "text"
-    t.integer "user_id"
-    t.integer "chat_id"
+    t.bigint "chat_id"
+    t.bigint "sender_id"
+    t.bigint "recipient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["chat_id"], name: "index_messages_on_chat_id"
+    t.index ["recipient_id"], name: "index_messages_on_recipient_id"
+    t.index ["sender_id"], name: "index_messages_on_sender_id"
   end
 
   create_table "users", force: :cascade do |t|

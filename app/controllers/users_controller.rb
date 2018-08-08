@@ -33,8 +33,9 @@ class UsersController < ApplicationController
 
   def show
     user = User.find_by(id: params[:id])
-    puts user 
-    render json: user.messages
+    puts user
+    all_msgs = user.sent_messages + user.received_messages
+    render json: all_msgs
   end
 
   private
