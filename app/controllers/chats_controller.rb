@@ -6,7 +6,6 @@ class ChatsController < ApplicationController
   end
 
   def create
-    # find or create by a message(s) with sender_id and recipient_id matches
     message = Message.all.find{|m| m.sender_id == chat_params[:sender_id] && m.recipient_id == chat_params[:recipient_id] || m.sender_id == chat_params[:recipient_id] && m.recipient_id == chat_params[:sender_id]}
 
     if message

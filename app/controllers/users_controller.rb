@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
     if user.valid?
       user.save
+      ActionCable.server.broadcast "users_channel", user
       render json: user
     else
       render json: {error: "user not created"}, status: 401
@@ -20,7 +21,6 @@ class UsersController < ApplicationController
     user = User.find_by(username: user_params[:username])
 
     if user && user.authenticate(user_params[:password])
-      # ActionCable.server.broadcast "users_channel", user
       render json: user
     else
       render json: {error: "login failed"}, status: 401
