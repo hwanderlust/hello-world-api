@@ -50,7 +50,7 @@ class MessagesController < ApplicationController
   end
 
   def api_key
-    key = "AIzaSyBhn69XDqc7P-3yXA_dLClhrck9G0UJmYg"
+    key = ""
   end
 
   # def project_id
