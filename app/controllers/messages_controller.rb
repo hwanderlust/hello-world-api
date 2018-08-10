@@ -4,11 +4,22 @@ class MessagesController < ApplicationController
     message = Message.new(message_params)
     chat = Chat.find(message_params[:chat_id])
     puts "~~~~~~~~~~~~~msg: #{message}, chat: #{chat}"
-    
+
     if message.valid?
       message.save
       MessagesChannel.broadcast_to chat, message
-      head :ok
+      # head :ok
+      render json: message
+    end
+  end
+
+  def show
+    msg = Message.find_by(id: params[:id])
+    puts msg
+    if msg
+      render json: msg
+    else
+      render json: {error: 'Message not found'}
     end
   end
 

@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   #
   resources :users, only: [:index, :create, :show]
   resources :conversations, only: [:index, :create]
-  resources :chats, only: [:index, :create]
-  resources :messages, only: [:create]
+  resources :chats, only: [:index, :create, :show]
+  resources :messages, only: [:create, :show]
   post '/login' => 'users#login'
   post '/get_user' => 'users#get_user'
   mount ActionCable.server => '/cable'

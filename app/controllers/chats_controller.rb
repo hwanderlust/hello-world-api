@@ -21,6 +21,15 @@ class ChatsController < ApplicationController
     end
   end
 
+  def show
+    chat = Chat.find_by(id: params[:id])
+    if chat
+      render json: chat
+    else
+      render json: {error: "Chat not found"}
+    end
+  end
+
   private
 
   def chat_params
