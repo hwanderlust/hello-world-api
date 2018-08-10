@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "airy-dialect-210921",
+  "private_key_id": "7eaf02d97afb2d49271dc9b1ecc6d858ff3fc4d8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCxJnk3VTPeddj0\nKl+EmzJSvE+VG1jenRZqL38hUYaY/YBJnGso1CkmDmy1Ct6O1c0Gs/9R8VltxMAO\nFFqf2eDPyHHraNlEHQokLTag7QVdZDbNlDBlhSoT+OVTew0TDnSSz8Pj0ztG+wNp\ndZjoy35dEPAk+nsDA+lhylk+Pl3uggAg8WQQwVodpvqrUtaaxtINfelo30pg63yy\nnL4LpKz/CuB5eBA84KEv/1i+i0IHJm9mNpVU8Xw/yrGNHzwE5nZW/XwMQe9dOtz9\nxzwPnfV+hmUR+Hv4z6r2z7uc/1Q5mbGZa+Dp6t2jyeUwX4BHnR7K2VhoZ6vcutfm\nBCE1OqahAgMBAAECggEAAZ/eAeez9/WLZ6qgDrxELvmrY+gA2w/pwRpmMLxhoZNm\nXtPFMItuBMDM/Bsb+Sdid9NUm1LH6Hjtedo+ThZqayiza+aIWAQJaCqlOalvbeNg\nbzG4FiU9XRqlzTZnmLneetZr3Xc+BS+3S2XiJk/akjtImCPhzFsNGRnzkq2xxjEw\nGgqDAaAIg3znDwuWSc2vjN6ooNkQGahLl1kCuF/gakowZ0MAEkMdTvMXI4yw5FW0\nNhOcYzce5sSNFztVdwQZTK+gjDe5kfG1a71GLmfZVw0eoCwJfiLg4bkcZvCMG3wc\n3TIrlxfgbTWv12Ln8E7VS6LCvDeILP0hoQT7vLz2gQKBgQDwB7R5/ViuHovQh8L+\n1Y1iU4NQ8W3u5TOsQR/fJ+iIREQrIHMa6iq0pFkcmSpZXEYncMaSqq2jo3WgWESG\nLq0QaSKVuwnIaLP3afNC9fY00PorLm1P+8L4FjaUtmlwf8snm6WuffAkJKQ7DHpH\nTs2dWu39UlTscIyD4qb3sEjG4QKBgQC878XThVknTmYthkfhVJVtwB6k7GWjfDBC\nHeaW0zkIqPKN7krcsz9FDuRGFDeI4AK9EfSuKDvTwm69L/PJFA+AM0QzkGeEO6kq\nRQ47WdcAdxyQYPnmC+Olnr6Q/Y5n+e2g2ndQj/hopkd/q+6rHvqb4yNz34PTqAFx\nyyQdWM6XwQKBgA8SPMfIG5BbRKYkUB8WI5l/6ufjMObmJ1dyg2DMrbIYrzsR/4g6\nGdJb22iLSXhw7cq+Lwm4g8yZj+IwiKTwO1ejclN6egPGZz5qvaZ/sSTh1kNt19lE\n0ponMuglh/tTWtsyz7VkHPb4AgPfJbJihVCTDAxy5fgunPQPADLfM8KhAoGAEFQo\npL9BlUQRUJ3qWG8W+wU/oMFNh3OUOCKdayuWIkl3rQyLK8fSEAXZdLUKl6nEktKa\ncvLHOOX07CTYzOgO7uV/X3V7fNIrLJwLPtXk3wVsUo4PCvK8GfQ+RAml5RaUkvJO\nnYfT0DeOtloFpoRm5FIdHkaS/hfnCA6mcGLceAECgYEA0TVb64dBiun33zSUzdsV\nf0+P7RDBkGCcodR1MX+vrLjcBTvct8ayJo3apkr5fKf+WVJuxhjtUNPIcIFQoN/5\nXcBjzE/6dwTQ/nx7G/PeEEV2OveMOzPKw1VPdGsy3rtAWPvOJcF24tqYqfeK+hNT\nTbrFxuXdxSLmm8O5UJ99+tA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "starting-account-ax7yzk1o7vso@airy-dialect-210921.iam.gserviceaccount.com",
+  "client_id": "112219215504655986642",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/starting-account-ax7yzk1o7vso%40airy-dialect-210921.iam.gserviceaccount.com"
+}
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/paully/Development/code/Mod_5/hello-world-api/My First Project-7eaf02d97afb.json"
