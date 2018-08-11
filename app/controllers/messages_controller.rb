@@ -14,17 +14,19 @@ class MessagesController < ApplicationController
     end
   end
 
-  def translate
-    puts translate_params
-    detection_url = "https://translation.googleapis.com/language/translate/v2/detect?key=#{api_key}&q=#{translate_params}"
+  def detection
+    detection_url = "https://translation.googleapis.com/language/translate/v2/detect?key=#{api_key}&q=#{detection_params[:msg]}"
     detection_response = JSON.parse(RestClient.post detection_url, {content_type: :json, accept: :json})
     orig_lang = detection_response["data"]["detections"][0][0]["language"]
     puts orig_lang
 
-    translate_to_lang = translate_params[:lang]
+    render json: detection_response
+  end
+
+  def translate
     resp_format = "text"
     translate_base_url = "https://translation.googleapis.com/language/translate/v2"
-    translate_url = "#{translate_base_url}?key=#{api_key}&q=#{translate_params[:msg]}&source=#{orig_lang}&target=#{translate_to_lang}&format=#{resp_format}"
+    translate_url = "#{translate_base_url}?key=#{api_key}&q=#{translate_params[:msg]}&source=#{translate_params[:fromLang]}&target=#{translate_params[:toLang]}&format=#{resp_format}"
     puts translate_url
 
     response = RestClient.post translate_url, {content_type: :json, accept: :json}
@@ -41,7 +43,11 @@ class MessagesController < ApplicationController
   end
 
   def translate_params
-    params.require(:message).permit(:msg, :lang)
+    params.require(:message).permit(:msg, :fromLang, :toLang)
+  end
+
+  def detection_params
+    params.require(:detection).permit(:msg)
   end
 
   def api_key

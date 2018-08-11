@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   post '/login' => 'users#login'
   post '/get_user' => 'users#get_user'
   post '/translate' => 'messages#translate'
+  post '/detect_language' => 'messages#detection'
   mount ActionCable.server => '/cable'
 
 end
