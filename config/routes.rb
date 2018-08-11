@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/get_user' => 'users#get_user'
   post '/translate' => 'messages#translate'
   post '/detect_language' => 'messages#detection'
+  post '/upload-picture' => 'users#picture'
   mount ActionCable.server => '/cable'
 
 end

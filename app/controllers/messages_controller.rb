@@ -51,6 +51,7 @@ class MessagesController < ApplicationController
   end
 
   def api_key
+    # sekrets read config/settings.yml.enc
     key = ""
   end
 

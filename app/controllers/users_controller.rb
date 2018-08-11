@@ -38,9 +38,15 @@ class UsersController < ApplicationController
     render json: all_msgs
   end
 
+  def picture
+    byebug
+    # params[:imgUrl]
+    render json: something
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password, :profile_picture)
   end
 end
