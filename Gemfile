@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.3'
 gem 'active_model_serializers', '~> 0.10.2'
+# gem 'google-cloud-translate', '~> 0.20.0'
+gem 'rest-client', '~> 1.8'
+# gem 'mojinizer', '~> 0.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
