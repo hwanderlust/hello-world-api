@@ -12,6 +12,7 @@ class ChatsController < ApplicationController
       chat = Chat.find_by(id: message.chat_id)
     else
       chat = Chat.create()
+      default_msg = Message.create(text: "Welcome to your new chat!", chat_id: chat.id, sender_id: chat_params[:sender_id], recipient_id: chat_params[:recipient_id])
     end
 
     if chat.valid?
