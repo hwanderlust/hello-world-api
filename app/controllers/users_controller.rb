@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       ActionCable.server.broadcast "users_channel", user
       render json: user
     else
-      render json: {error: "user not created"}, status: 401
+      render json: {error: user.errors}, status: 422
     end
   end
 
@@ -22,8 +22,10 @@ class UsersController < ApplicationController
 
     if user && user.authenticate(user_params[:password])
       render json: user
+    elsif user
+      render json: {error: "Incorrect password"}, status: 401
     else
-      render json: {error: "login failed"}, status: 401
+      render json: {error: "Username may not exist"}, status: 401
     end
   end
 
@@ -41,6 +43,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :profile_picture)
+    params.require(:user).permit(:username, :password, :profile_picture, :location, :age, :nationality, :languages, :introduction, :hobbies, :goals)
   end
 end

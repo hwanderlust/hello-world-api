@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 2018_08_07_183526) do
     t.string "username"
     t.string "password_digest"
     t.string "profile_picture"
+    t.string "location"
+    t.integer "age"
+    t.string "nationality"
+    t.string "languages"
+    t.string "introduction"
+    t.string "hobbies"
+    t.string "goals"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
