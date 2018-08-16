@@ -5,6 +5,7 @@ class CreateMessages < ActiveRecord::Migration[5.2]
       t.references :chat
       t.references :sender
       t.references :recipient
+      t.references :list
       t.timestamps
     end
   end

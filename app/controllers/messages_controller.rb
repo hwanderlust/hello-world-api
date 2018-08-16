@@ -36,6 +36,17 @@ class MessagesController < ApplicationController
     render json: translation_response
   end
 
+  def add_to_list
+    list = List.find_by(id: add_to_list_params[:list_id])
+
+    if list
+      message = Message.find_by(id: add_to_list_params[:msg_id])
+
+      list.messages << message
+      render json: list.messages
+    end
+  end
+
   private
 
   def message_params
@@ -48,6 +59,10 @@ class MessagesController < ApplicationController
 
   def detection_params
     params.require(:detection).permit(:msg)
+  end
+
+  def add_to_list_params
+    params.require(:message).permit(:msg_id, :list_id)
   end
 
   def api_key
