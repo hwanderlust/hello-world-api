@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   has_secure_password
 
-  validates  :username, {presence: true, length: {minimum: 4, maximum: 70}}
-  validates  :age, {presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 5, less_than_or_equal_to: 122 }}
-  validates  :password, {length: {minimum: 6}, allow_nil: true}
+  validates :username, {presence: true, length: {minimum: 4, maximum: 70}}
+  validates :age, {presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 5, less_than_or_equal_to: 122 }}
+  validates :password, {length: {minimum: 6}, allow_nil: true}
   validates :profile_picture, {presence: true}
   validates :location, {presence: true}
   validates :nationality, {presence: true}

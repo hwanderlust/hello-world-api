@@ -19,6 +19,17 @@ class ListsController < ApplicationController
     end
   end
 
+  def destroy
+    list = List.find_by(id: params[:id])
+    list.destroy
+    
+    if list
+      render json: {error: "Couldn't delete"}
+    else
+      render json: {success: "Congrats, it's been deleted"}
+    end
+  end
+
   private
   def list_params
     params.require(:list).permit(:name, :user_id)

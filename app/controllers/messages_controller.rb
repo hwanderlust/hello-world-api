@@ -37,12 +37,23 @@ class MessagesController < ApplicationController
   end
 
   def add_to_list
-    list = List.find_by(id: add_to_list_params[:list_id])
+    list = List.find_by(id: with_list_params[:list_id])
 
     if list
-      message = Message.find_by(id: add_to_list_params[:msg_id])
+      message = Message.find_by(id: with_list_params[:msg_id])
 
       list.messages << message
+      render json: list.messages
+    end
+  end
+
+  def remove_from_list
+    list = List.find_by(id: with_list_params[:list_id])
+
+    if list
+      message = Message.find_by(id: with_list_params[:msg_id])
+      message[:list_id] = nil
+      message.save
       render json: list.messages
     end
   end
@@ -61,7 +72,7 @@ class MessagesController < ApplicationController
     params.require(:detection).permit(:msg)
   end
 
-  def add_to_list_params
+  def with_list_params
     params.require(:message).permit(:msg_id, :list_id)
   end
 
