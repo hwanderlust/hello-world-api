@@ -18,13 +18,6 @@ class ChatsController < ApplicationController
     if chat.valid?
       ActionCable.server.broadcast "chats_channel", chat
       # head :ok
-      # maybe create chat object with respective messages inside
-      # msgs = chat.messages
-      # chatObj = chat.clone
-      # byebug
-      # chatObj[:messages] = msgs
-      # puts chatObj
-      # render json: chatObj
 
       render json: chat
     end
