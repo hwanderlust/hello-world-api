@@ -1,25 +1,8 @@
-# README
+## Hello World (API / backend)
+An API built for the sole purpose of managing the backend for my Hello World web application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Built in Rails, used Action Cable, ActiveRecord and a Postgres DB 
 
-Things you may want to cover:
+RESTful URIs and includes full CRUD HTTP requests 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# hello-world-api
+Communicates with Google's RESTful APIs
