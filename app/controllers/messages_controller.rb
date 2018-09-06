@@ -78,8 +78,9 @@ class MessagesController < ApplicationController
   end
 
   def api_key
-    settings = Sekrets.settings_for('./config/settings.yml.enc')
-    key = settings[:google_api_key]
+    # settings = Sekrets.settings_for('./config/settings.yml.enc')
+    # key = settings[:google_api_key]
+    Rails.application.credentials[:google_api_key]
   end
 
 end
