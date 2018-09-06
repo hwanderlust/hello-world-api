@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount ActionCable.server => '/cable'
+
   get 'lists/create'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #
@@ -15,6 +17,5 @@ Rails.application.routes.draw do
   post '/save_message' => 'messages#add_to_list'
   post '/remove_message' => 'messages#remove_from_list'
 
-  mount ActionCable.server => '/cable'
 
 end
