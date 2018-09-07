@@ -15,9 +15,10 @@ class MessagesController < ApplicationController
   end
 
   def detection
+    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~hits #detection"
     detection_url = "https://translation.googleapis.com/language/translate/v2/detect?key=#{api_key}&q=#{detection_params[:msg]}"
     detection_response = JSON.parse(RestClient.post detection_url, {content_type: :json, accept: :json})
-    byebug
+    puts detection_response["data"]
     orig_lang = detection_response["data"]["detections"][0][0]["language"]
     puts orig_lang
 
