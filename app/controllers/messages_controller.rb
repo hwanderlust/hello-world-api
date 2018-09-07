@@ -26,7 +26,7 @@ class MessagesController < ApplicationController
   def translate
     resp_format = "text"
     translate_base_url = "https://translation.googleapis.com/language/translate/v2"
-
+    byebug
     translate_url = "#{translate_base_url}?key=#{api_key}&q=#{translate_params[:msg]}&source=#{translate_params[:fromLang]}&target=#{translate_params[:toLang]}&format=#{resp_format}"
     puts translate_url
 
