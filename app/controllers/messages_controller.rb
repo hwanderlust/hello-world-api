@@ -82,7 +82,7 @@ class MessagesController < ApplicationController
   end
 
   def api_key
-    Rails.application.credentials.google_api_key
+    Rails.application.credentials.google
   end
 
 end
