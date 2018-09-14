@@ -3,7 +3,6 @@ class MessagesChannel < ApplicationCable::Channel
     puts "~~~~~~~~~~~~~~~~~~~~MessagesChannel: #{params}"
     chat = Chat.find(params[:chat])
     stream_for chat
-    stream_from "messages_channel"
   end
 
   def unsubscribed

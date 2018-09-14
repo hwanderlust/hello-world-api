@@ -10,7 +10,6 @@ class MessagesController < ApplicationController
     if message.valid?
       message.save
       MessagesChannel.broadcast_to chat, message
-      ActionCable.server.broadcast "messages_channel", message
       # head :ok
       render json: message
     end
