@@ -11,7 +11,8 @@ class MessagesController < ApplicationController
       message.save
       MessagesChannel.broadcast_to chat, message
       ActionCable.server.broadcast "messages_channel", message
-      head :ok
+      # head :ok
+      render json: message
     end
   end
 
