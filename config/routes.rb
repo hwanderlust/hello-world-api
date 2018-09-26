@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   post '/detect_language' => 'messages#detection'
   get '/users/:id/lists' => 'users#get_lists'
   post '/save_message' => 'messages#add_to_list'
+  patch '/save_message' => 'messages#add_to_list'
   post '/remove_message' => 'messages#remove_from_list'
 
 
